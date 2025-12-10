@@ -1,8 +1,14 @@
 <h1 align="center">Blockscout</h1>
 <p align="center">add SC-VERIFIER</p>
 <div align="center">
-
-도커 내릴떄마다 새로 맨날 갈겨야함 (자동 추가는 블록스카우트 5부터 적용) <br>
+legay solc compiler 추가법 <br>
+  docker exec -it backend sh <br>
+  cd /app/lib/explorer-9.3.0/priv/solc_compilers/ <br>
+  rm v0.6.12+commit.27d51765.js <br>
+  wget -O v0.6.12+commit.27d51765.js https://binaries.soliditylang.org/bin/soljson-v0.6.12+commit.27d51765.js <br>
+  exit <br>
+  docker restart backend <br>
+도커 내릴떄마다 새로 맨날 갈겨야함 (자동 추가는 블록스카우트 5부터 적용) 못함 <br>
 
 
 백엔드에 노드 깔아야함 <br>
